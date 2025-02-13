@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+
+  body {
+    @apply bg-background text-white overflow-x-hidden;
+  }
+
+  /* Personnalisation de la barre de défilement */
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-background;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-glass rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-glass-hover;
+  }
+}
+
+@layer components {
+  .table-container {
+    @apply w-full overflow-x-auto;
+    @apply scrollbar-thin scrollbar-thumb-glass scrollbar-track-transparent;
+  }
+}
